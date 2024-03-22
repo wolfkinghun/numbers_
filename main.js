@@ -17,7 +17,7 @@ guessedNum.addEventListener('keydown', function(event) {
 });
 
 function calcAns() {
-    ans.textContent = compare(+guessedNum.value, randNum)
+    ans.textContent = compare(guessedNum.value, randNum)
 }
 
 check.addEventListener('click', calcAns)

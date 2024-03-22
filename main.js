@@ -2,7 +2,7 @@ import {genrandNumber, compare} from "./js.js"
         
 
 let randNum;
-const ans = document.querySelector('.ans')
+const result = document.querySelector('.result')
 const guessedNum = document.getElementById('guessedNum')
 const check = document.querySelector('.check')
 
@@ -17,7 +17,7 @@ guessedNum.addEventListener('keydown', function(event) {
 });
 
 function calcAns() {
-    ans.textContent = compare(guessedNum.value, randNum)
+    result.textContent = compare(guessedNum.value, randNum)
 }
 
 check.addEventListener('click', calcAns)

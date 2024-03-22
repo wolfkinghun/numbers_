@@ -1,5 +1,5 @@
-export function genrandNumber(min, max) {
-    return Math.floor(Math.random()*(max-min+1))+min
+export function genrandNumber(minNr, maxNr) {
+    return Math.floor(Math.random()*(maxNr-minNr+1))+minNr
 }
 
 export function compare(guessedNr, randomNr) {

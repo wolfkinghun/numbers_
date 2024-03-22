@@ -1,15 +1,15 @@
 import {genrandNumber, compare} from "./js.js"
         
 
-let randNum;
+let randNumber;
 const result = document.querySelector('.result')
 const guessedNum = document.getElementById('guessedNum')
 const check = document.querySelector('.check')
 
 
 addEventListener("DOMContentLoaded", (event) => {
-    randNum = genrandNumber(1, 100) // Change this later.
-    console.log(randNum); // Teszt - Delete
+    randNumber = genrandNumber(1, 100)
+    console.log(randNumber); // Teszt - Delete
 });
 
 guessedNum.addEventListener('keydown', function(event) {
@@ -21,8 +21,6 @@ guessedNum.addEventListener('blur', function(event) {
     if (guessedNum.value > +guessedNum.max) guessedNum.value = guessedNum.max
 });
 
-function calcAns() {
+check.addEventListener('click', (event) => {
     result.textContent = compare(guessedNum.value, randNum)
-}
-
-check.addEventListener('click', calcAns)
+})

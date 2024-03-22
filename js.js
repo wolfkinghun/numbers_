@@ -4,6 +4,6 @@ export function genrandNumber(min, max) {
 
 export function compare(guessedNr, randomNr) {
     if (guessedNr > randomNr) return "A te számod nagyobb."
-    else if (randomNr > guessedNr) return "A te számod ksiebb."
+    else if (randomNr > guessedNr) return "A te számod kisebb."
     else return "Helyes megfejtés."
 }

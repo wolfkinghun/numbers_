@@ -16,6 +16,11 @@ guessedNum.addEventListener('keydown', function(event) {
     if (event.key === 'e' || event.key === 'E') event.preventDefault()
 });
 
+guessedNum.addEventListener('blur', function(event) {
+    if (guessedNum.value < +guessedNum.min) guessedNum.value = guessedNum.min
+    if (guessedNum.value > +guessedNum.max) guessedNum.value = guessedNum.max
+});
+
 function calcAns() {
     result.textContent = compare(guessedNum.value, randNum)
 }

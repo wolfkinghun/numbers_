@@ -22,5 +22,5 @@ guessedNum.addEventListener('blur', function(event) {
 });
 
 check.addEventListener('click', (event) => {
-    result.textContent = compare(guessedNum.value, randNum)
+    result.textContent = compare(guessedNum.value, randNumber)
 })
